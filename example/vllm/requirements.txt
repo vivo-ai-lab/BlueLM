@@ -1,0 +1,11 @@
+ninja
+psutil
+ray >= 2.5.1
+sentencepiece
+numpy
+torch == 2.0.1
+transformers == 4.33.0
+xformers == 0.0.22
+fastapi
+uvicorn
+pydantic < 2
