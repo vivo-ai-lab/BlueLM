@@ -276,6 +276,12 @@ python vllm_demo.py
 
 # Fine-tuning the Model
 
+## Dependency Installation
+
+```
+pip install deepspeed==0.10.3
+```
+
 ## Training Data
 
 To demonstrate the fine-tuning process of our model in a simplified way, we selectively extracted 10,000 Chinese instruction data from the [BELLE project 500k Chinese instruction dataset](https://huggingface.co/datasets/BelleGroup/train_0.5M_CN) to serve as a demonstrative dataset. The data has been processed and can be accessed at `data/bella_train_demo.json` and `data/bella_dev_demo.json`.
@@ -286,27 +292,28 @@ After obtaining the processed data, you can perform fine-tuning training by conf
 
 The description of the relevant parameters is as follows:
 
-| Parameter                       | Description                                                                              |
-|:--------------------------------|:-----------------------------------------------------------------------------------------|
-| **num_gpus**                    | Number of GPUs to use                                                                    |
-| **train_file**                  | The path of train file                                                                   |
-| **prompt_column**               | The name of prompt column                                                                |
-| **response_column**             | The name of response column                                                              |
-| **model_name_or_path**          | Storage path for the preloaded model                                                     |
-| **output_dir**                  | Storage path for the fine-tuned model                                                    |
-| **tensorboard_dir**             | Storage path for the tensorboard                                                         |
-| **seq_len**                     | Maximum length of training sequence                                                      |
-| **batch_size_per_device**       | Number of samples per GPU input during training iteration                                |
-| **gradient_accumulation_steps** | Step length for gradient accumulation. Default is 1, which means no gradient accumulation|
-| **gradient_checkpointing**      | Whether to use gradient checkpointing                                                    |
-| **max_steps**                   | Number of iterations for model training                                                  |
-| **save_steps**                  | The interval step of model saving                                                        |
-| **learning_rate**               | Learning rate                                                                            |
-| **finetune**                    | Whether to enable fine-tuning                                                            |
+| Parameter                       | Description                                                                                |
+|:--------------------------------|:-------------------------------------------------------------------------------------------|
+| **num_gpus**                    | Number of GPUs to use                                                                      |
+| **train_file**                  | The path of train file                                                                     |
+| **prompt_column**               | The name of prompt column                                                                  |
+| **response_column**             | The name of response column                                                                |
+| **model_name_or_path**          | Storage path for the preloaded model                                                       |
+| **output_dir**                  | Storage path for the fine-tuned model                                                      |
+| **tensorboard_dir**             | Storage path for the tensorboard                                                           |
+| **seq_len**                     | Maximum length of training sequence                                                        |
+| **batch_size_per_device**       | Number of samples per GPU input during training iteration                                  |
+| **gradient_accumulation_steps** | Step length for gradient accumulation. Default is 1, which means no gradient accumulation  |
+| **gradient_checkpointing**      | Whether to use gradient checkpointing                                                      |
+| **max_steps**                   | Number of iterations for model training                                                    |
+| **save_steps**                  | The interval step of model saving                                                          |
+| **learning_rate**               | Learning rate                                                                              |
+| **finetune**                    | Whether to enable fine-tuning                                                              |
 
 You can start fine-tuning training using the following command:
 
 ```sh
+cd train
 sh script/bluelm-7b-sft.sh
 ```
 
@@ -325,6 +332,7 @@ The description of the relevant parameters is as follows:
 You can start fine-tuning training with LoRA using the following command:
 
 ```sh
+cd train
 sh script/bluelm-7b-sft-lora.sh
 ```
 

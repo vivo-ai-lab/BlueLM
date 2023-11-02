@@ -6,7 +6,6 @@ xformers>=0.0.21
 peft==0.5.0
 accelerate==0.20.3
 datasets==2.14.5
-deepspeed==0.10.3
 tensorboard
 timm
 bitsandbytes

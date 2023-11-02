@@ -278,6 +278,12 @@ python vllm_demo.py
 
 # 模型微调
 
+## 环境依赖
+
+```
+pip install deepspeed==0.10.3
+```
+
 ## 数据准备
 
 为了简单展示模型的微调流程，我们在 [BELLE 项目 50w 中文指令](https://huggingface.co/datasets/BelleGroup/train_0.5M_CN) 中随机抽取了 1w 条中文指令数据，处理后的数据路径为 `data/bella_train_demo.json` 和 `data/bella_dev_demo.json`。
@@ -288,27 +294,28 @@ python vllm_demo.py
 
 相关参数的说明如下所示：
 
-| Parameter                       | Description                                  |
-|:--------------------------------|:---------------------------------------------|
-| **num_gpus**                    | 对应 GPU 的卡数                               |
-| **train_file**                  | 训练数据的路径                                |
-| **prompt_column**               | 数据集指令问题的列名                           |
-| **response_column**             | 数据集指令回复的列名                           |
-| **model_name_or_path**          | 预加载模型的存储路径                           |
-| **output_dir**                  | 微调模型的保存路径                             |
-| **tensorboard_dir**             | tensorboard的保存路径                         |
-| **seq_len**                     | 训练序列的最大长度                             |
-| **batch_size_per_device**       | 训练迭代中每个 GPU 输入的样本数量               |
-| **gradient_accumulation_steps** | 梯度累积的步长，默认为 1，表示不进行梯度累积     |
-| **gradient_checkpointing**      | 是否开启激活重算                               |
-| **max_steps**                   | 模型训练的迭代数                               |
-| **save_steps**                  | 模型训练的保存周期                             |
-| **learning_rate**               | 初始学习率                                    |
-| **finetune**                    | 是否开启模型微调                               |
+| Parameter                       | Description                                 |
+|:--------------------------------|:--------------------------------------------|
+| **num_gpus**                    | 对应 GPU 的卡数                                  |
+| **train_file**                  | 训练数据的路径                                     |
+| **prompt_column**               | 数据集指令问题的列名                                  |
+| **response_column**             | 数据集指令回复的列名                                  |
+| **model_name_or_path**          | 预加载模型的存储路径                                  |
+| **output_dir**                  | 微调模型的保存路径                                   |
+| **tensorboard_dir**             | tensorboard的保存路径                            |
+| **seq_len**                     | 训练序列的最大长度                                   |
+| **batch_size_per_device**       | 训练迭代中每个 GPU 输入的样本数量                         |
+| **gradient_accumulation_steps** | 梯度累积的步长，默认为 1，表示不进行梯度累积                     |
+| **gradient_checkpointing**      | 是否开启激活重算                                    |
+| **max_steps**                   | 模型训练的迭代数                                    |
+| **save_steps**                  | 模型训练的保存周期                                   |
+| **learning_rate**               | 初始学习率                                       |
+| **finetune**                    | 是否开启模型微调                                    |
 
 使用全量微调的启动命令如下：
 
 ```sh
+cd train
 sh script/bluelm-7b-sft.sh
 ```
 
@@ -318,15 +325,16 @@ sh script/bluelm-7b-sft.sh
 
 主要参数说明如下：
 
-| Parameter                       | Description                                  |
-|:--------------------------------|:---------------------------------------------|
-| **lora_rank**                   | lora 矩阵的秩。一般设置为 8、16、32、64 等。    |
-| **lora_alpha**                  | lora 中的缩放参数。一般设为 16、32 即可         |
-| **lora_dropout**                | lora 权重的 dropout rate。                    |
+| Parameter                       | Description                                    |
+|:--------------------------------|:-----------------------------------------------|
+| **lora_rank**                   | lora 矩阵的秩。一般设置为 8、16、32、64 等。                  |
+| **lora_alpha**                  | lora 中的缩放参数。一般设为 16、32 即可                      |
+| **lora_dropout**                | lora 权重的 dropout rate。                         |
 
 使用 LoRA 微调的启动命令如下：
 
 ```sh
+cd train
 sh script/bluelm-7b-sft-lora.sh
 ```
 
