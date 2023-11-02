@@ -348,4 +348,6 @@ sh script/bluelm-7b-sft-lora.sh
 
 # 联系我们
 
-如有任务疑问，可以通过邮件（developers-ai@vivo.com）联系我们。
+如有任何疑问，可以通过邮件（developers-ai@vivo.com）联系我们，也可以加入 BlueLM 微信交流群探讨。
+
+![wechat](resources/wechat.png)

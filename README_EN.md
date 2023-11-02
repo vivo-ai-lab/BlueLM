@@ -346,4 +346,6 @@ Our technical report will be published later! You can read it for more details.
 
 # Contact Us
 
-If you have any questions about the BlueLM, you can contact us via email (developers-ai@vivo.com).
+If you have any questions about the BlueLM, you can contact us via email (developers-ai@vivo.com). You can also scan the QR code to join the WeChat group.
+
+![wechat](resources/wechat.png)
