@@ -352,7 +352,14 @@ sh script/bluelm-7b-sft-lora.sh
     
 ## 引用
 
-我们的技术报告后续会发布，届时可以获取更多详细信息。
+```
+@misc{2023bluelm,
+    title={BlueLM: An Open Multilingual 7B Language Model},
+    author={BlueLM Team},
+    howpublished = {\url{https://github.com/vivo-ai-lab/BlueLM}},
+    year={2023}
+}
+```
 
 # 联系我们
 

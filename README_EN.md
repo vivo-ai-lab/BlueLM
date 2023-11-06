@@ -350,7 +350,14 @@ Our code is licensed under the [Apache-2.0](https://www.apache.org/licenses/LICE
 
 ## Citation
 
-Our technical report will be published later! You can read it for more details.
+```
+@misc{2023bluelm,
+    title={BlueLM: An Open Multilingual 7B Language Model},
+    author={BlueLM Team},
+    howpublished = {\url{https://github.com/vivo-ai-lab/BlueLM}},
+    year={2023}
+}
+```
 
 # Contact Us
 
