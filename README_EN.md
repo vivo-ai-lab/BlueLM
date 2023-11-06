@@ -44,6 +44,8 @@ The release versions and hugging face download links are listed in the table bel
 | 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)              | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)             | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits)                      |
 | 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K)      | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K)     | -                                                                                                   |
 
+Welcome to read our technical report [BlueLM: An Open Multilingual 7B Language Model](https://github.com/vivo-ai-lab/BlueLM/blob/main/BlueLM_technical_report.pdf)!
+
 We will release the 13B language model and the 7B-vl multi-modal language model soon!
 
 # Benchmark Results

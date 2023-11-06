@@ -44,6 +44,8 @@ BlueLM 是由 vivo AI 全球研究院自主研发的大规模预训练语言模�
 | 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)         | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)         | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits) |
 | 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K) | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K) | -                                                                              |
 
+欢迎阅读我们的技术报告[BlueLM: An Open Multilingual 7B Language Model](https://github.com/vivo-ai-lab/BlueLM/blob/main/BlueLM_technical_report.pdf)！
+
 我们后续将开源 13B 模型和支持多模态的 7B-vl 模型，还请期待！
 
 # 评测结果
