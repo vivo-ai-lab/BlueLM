@@ -5,7 +5,7 @@
 </div>
 
 <p align="center">
-🤗 <a href="https://huggingface.co/vivo-ai" target="_blank">Hugging Face</a> • 📜 <a href="MODEL_LICENSE.pdf" target="_blank">LICENSE</a> • 🎯 <a href="https://developers.vivo.com/product/ai/bluelm" target="_blank">vivo Developers</a> • 🗨 <a href="resources/wechat.png" target="_blank">WeChat</a>
+🤗 <a href="https://huggingface.co/vivo-ai" target="_blank">Hugging Face</a> • 👾 <a href="https://www.modelscope.cn/organization/vivo-ai" target="_blank">ModelScope</a> • 📜 <a href="MODEL_LICENSE.pdf" target="_blank">LICENSE</a> • 🎯 <a href="https://developers.vivo.com/product/ai/bluelm" target="_blank">vivo Developers</a> • 🗨 <a href="resources/wechat.png" target="_blank">WeChat</a>
 </p>
 
 <div align="center">
