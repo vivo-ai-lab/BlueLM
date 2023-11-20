@@ -262,6 +262,8 @@ You can load and inference in the following manner:
 
 We added BlueLM inference code based on the [vllm](https://github.com/vllm-project/vllm) inference framework. The code is in the `example/vllm` directory.
 
+The required version of the NVIDIA driver to install is 525.125.06, and the CUDA version should be 12.1.
+
 ```
 python -m venv vllm
 source vllm/bin/activate

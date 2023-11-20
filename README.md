@@ -264,6 +264,8 @@ python setup_cuda.py install
 
 环境准备及编译：
 
+运行环境需要英伟达驱动版本为 525.125.06，同时 cuda 版本为 12.1。
+
 ```
 python -m venv vllm
 source vllm/bin/activate
