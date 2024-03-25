@@ -28,6 +28,10 @@
 - [📚 声明、协议、引用](#声明协议引用)
 - [📠 联系我们](#联系我们)
 
+# 新闻
+
+- 2024年3月25日更新 BlueLM-7B-Chat-32K 模型参数，支持 function calling 能力。我们在 [api_server.py](openai_api_demo/api_server.py) 中提供了 OpenAI 格式的 API。
+
 # 模型介绍
 
 BlueLM 是由 vivo AI 全球研究院自主研发的大规模预训练语言模型，本次发布包含 7B 基础 (base) 模型和 7B 对话 (chat) 模型，同时我们开源了支持 **32K** 的长文本基础 (base) 模型和对话 (chat) 模型。
@@ -156,6 +160,22 @@ streamlit run web_demo.py --server.port 8080
 ```
 
 本网页 Demo 仅支持 Chat 场景。
+
+## OpenAI API Demo
+
+运行 [api_server.py](openai_api_demo/api_server.py) 部署 OpenAI 格式的代码，支持基于 ChatGPT 应用后端。
+
+```shell
+cd openai_api_demo
+python api_server.py
+```
+
+python 测试代码，包括支持流式响应和 function call 的请求。
+
+```shell
+cd openai_api_demo
+python openai_api_request.py
+```
 
 ## BlueLM-7B-Chat 示例输出
 

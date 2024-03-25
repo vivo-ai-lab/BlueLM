@@ -28,6 +28,10 @@
 - [📚 Disclaimer, License and Citation](#Disclaimer-License-and-Citation)
 - [📠 Contact Us](#Contact-Us)
 
+# News and Updates
+
+- 2024.03.25 We update the checkpoints of BlueLM-7B-Chat-32K to support function calling capability. We provide an OpenAI-style API in [api_server.py](openai_api_demo/api_server.py).
+
 # Models Introduction
 
 BlueLM is a large-scale open-source language model independently developed by the vivo AI Lab. This release includes 2K and 32K context length versions for both Base and Chat models.
@@ -156,6 +160,22 @@ streamlit run web_demo.py --server.port 8080
 ```
 
 This web demo is only designed for Chat Model.
+
+## OpenAI API Demo
+
+Run [api_server.py](openai_api_demo/api_server.py) to deploy OpenAI style code, supporting Chatgpt-based applications.
+
+```shell
+cd openai_api_demo
+python api_server.py
+```
+
+Test code is as follows, including requests that support streaming responses and function calling.
+
+```shell
+cd openai_api_demo
+python openai_api_request.py
+```
 
 ## Demo Results of BlueLM-7B-Chat
 
