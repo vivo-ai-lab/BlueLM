@@ -30,7 +30,7 @@
 
 # 新闻
 
-- 2024年3月25日更新 BlueLM-7B-Chat-32K 模型参数，支持 function calling 能力。我们在 [api_server.py](openai_api_demo/api_server.py) 中提供了 OpenAI 格式的 API。
+- 2024年3月25日更新 BlueLM-7B-Chat-32K 模型参数，支持 function calling 能力。我们在 [api_server.py](openai_api_demo/api_server.py) 中提供了 OpenAI 格式的 API。更新 BlueLM-7B-Chat-32K-AWQ 和 BlueLM-7B-Chat-32K-GPTQ 模型。
 
 # 模型介绍
 
@@ -43,10 +43,10 @@ BlueLM 是由 vivo AI 全球研究院自主研发的大规模预训练语言模�
 
 本次发布基座模型下载链接见：
 
-|        | 基座模型                                                                       | 对齐模型                                                                       | 量化模型                                                                           |
-|:-------|:---------------------------------------------------------------------------|:---------------------------------------------------------------------------|:-------------------------------------------------------------------------------|
-| 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)         | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)         | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits) |
-| 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K) | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K) | -                                                                              |
+|        | 基座模型                                                                       | 对齐模型                                                                       | 量化模型                                                                                                                                                                   |
+|:-------|:---------------------------------------------------------------------------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)         | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)         | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits)                                                                                         |
+| 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K) | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K) | 🤗 [BlueLM-7B-Chat-32K-AWQ](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K-AWQ) / [BlueLM-7B-Chat-32K-GPTQ](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K-GPTQ) |
 
 欢迎阅读我们的技术报告[BlueLM: An Open Multilingual 7B Language Model](https://github.com/vivo-ai-lab/BlueLM/blob/main/BlueLM_technical_report.pdf)！
 
@@ -170,7 +170,7 @@ cd openai_api_demo
 python api_server.py
 ```
 
-python 测试代码，包括支持流式响应和 function call 的请求。
+python 测试代码，包括支持流式响应和 function calling 的请求。
 
 ```shell
 cd openai_api_demo

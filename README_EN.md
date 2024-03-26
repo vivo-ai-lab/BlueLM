@@ -30,7 +30,7 @@
 
 # News and Updates
 
-- 2024.03.25 We update the checkpoints of BlueLM-7B-Chat-32K to support function calling capability. We provide an OpenAI-style API in [api_server.py](openai_api_demo/api_server.py).
+- 2024.03.25 We update the checkpoints of BlueLM-7B-Chat-32K to support function calling capability. We provide an OpenAI-style API in [api_server.py](openai_api_demo/api_server.py). We upload BlueLM-7B-Chat-32K-AWQ and BlueLM-7B-Chat-GPTQ models.
 
 # Models Introduction
 
@@ -43,10 +43,10 @@ BlueLM is a large-scale open-source language model independently developed by th
 
 The release versions and hugging face download links are listed in the table below:
 
-|        | Base Model                                                                      | Chat Model                                                                     | 4bits Quantized Chat Model                                                                          |
-|:-------|:--------------------------------------------------------------------------------|:-------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------|
-| 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)              | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)             | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits)                      |
-| 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K)      | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K)     | -                                                                                                   |
+|        | 基座模型                                                                       | 对齐模型                                                                       | 量化模型                                                                                                                                                                   |
+|:-------|:---------------------------------------------------------------------------|:---------------------------------------------------------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7B-2K  | 🤗 [BlueLM-7B-Base](https://huggingface.co/vivo-ai/BlueLM-7B-Base)         | 🤗 [BlueLM-7B-Chat](https://huggingface.co/vivo-ai/BlueLM-7B-Chat)         | 🤗 [BlueLM-7B-Chat-4bits](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-4bits)                                                                                         |
+| 7B-32K | 🤗 [BlueLM-7B-Base-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Base-32K) | 🤗 [BlueLM-7B-Chat-32K](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K) | 🤗 [BlueLM-7B-Chat-32K-AWQ](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K-AWQ) / [BlueLM-7B-Chat-32K-GPTQ](https://huggingface.co/vivo-ai/BlueLM-7B-Chat-32K-GPTQ) |
 
 Welcome to read our technical report [BlueLM: An Open Multilingual 7B Language Model](https://github.com/vivo-ai-lab/BlueLM/blob/main/BlueLM_technical_report.pdf)!
 
