@@ -84,11 +84,15 @@ To ensure the consistency of model evaluation, we use [OpenCompass](https://open
 
 ## 7B-32K Model Results
 
-We also tested our BlueLM-7B-Chat-32K  on the LongBench dataset and the results are shown in the table below:
+We also tested our BlueLM-7B-Chat-32K  on the LongBench and T-Eval datasets. The results are shown in the table below:
 
 | Model                  | Average  | Summary  | Single-Doc QA | Multi-Doc QA  | Code  | Few-shot | Synthetic |
 |:-----------------------|:---------|:---------|:--------------|:--------------|:------|:---------|:----------|
 | BlueLM-7B-Chat-32K     | 41.2     | 18.8     | 35.6          | 36.2          | 54.2  | 56.9     | 45.5      |
+
+| Model                 | instruct | plan | reason | retrieve | understand | review | overall |
+|:----------------------|:---------|:-----|:-------|:---------|:-----------|:-------|:--------|
+| BlueLM-7B-Chat-32K    | 79.6     | 63.4 | 61.5   | 73.9     | 74.2       | 73.9   | 71.3    |
 
 # Inference and Deployment
 
