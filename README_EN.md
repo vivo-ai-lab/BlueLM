@@ -68,6 +68,7 @@ To ensure the consistency of model evaluation, we use [OpenCompass](https://open
 - [MATH](https://huggingface.co/datasets/competition_math) is a new dataset of 12,500 challenging competition mathematics problem.
 - [HumanEval](https://huggingface.co/datasets/openai_humaneval) is to measure functional correctness for synthesizing programs from docstrings.
 - [LongBench](https://github.com/THUDM/LongBench) is the first benchmark for bilingual, multitask, and comprehensive assessment of long context understanding capabilities of large language models.
+- [T-Eval](https://github.com/open-compass/T-Eval) is a fine-grained benchmark in LLM evaluation on tool-utilization ability. We tested our model on its Chinese dataset.
 
 ## 7B Model Results
 
@@ -86,13 +87,19 @@ To ensure the consistency of model evaluation, we use [OpenCompass](https://open
 
 We also tested our BlueLM-7B-Chat-32K  on the LongBench and T-Eval datasets. The results are shown in the table below:
 
+### LongBench
+
 | Model                  | Average  | Summary  | Single-Doc QA | Multi-Doc QA  | Code  | Few-shot | Synthetic |
 |:-----------------------|:---------|:---------|:--------------|:--------------|:------|:---------|:----------|
 | BlueLM-7B-Chat-32K     | 41.2     | 18.8     | 35.6          | 36.2          | 54.2  | 56.9     | 45.5      |
 
-| Model                 | instruct | plan | reason | retrieve | understand | review | overall |
-|:----------------------|:---------|:-----|:-------|:---------|:-----------|:-------|:--------|
-| BlueLM-7B-Chat-32K    | 79.6     | 63.4 | 61.5   | 73.9     | 74.2       | 73.9   | 71.3    |
+### T-Eval-ZH
+
+| Model                 | instruct | plan     | reason   | retrieve | understand | review   | overall  |
+|:----------------------|:---------|:---------|:---------|:---------|:-----------|:---------|:---------|
+| Qwen-7B               | 82.3     | 62.2     | 50.0     | 59.1     | 67.0       | 57.1     | 63.0     |
+| Qwen-14B              | **96.5** | **77.1** | 57.0     | 73.0     | **76.5**   | 43.7     | 70.6     |
+| BlueLM-7B-Chat-32K    | 79.6     | 63.4     | **61.5** | **73.9** | 74.2       | **73.9** | **71.3** |
 
 # Inference and Deployment
 
@@ -179,6 +186,26 @@ Test code is as follows, including requests that support streaming responses and
 ```shell
 cd openai_api_demo
 python openai_api_request.py
+```
+
+## Tool Demo
+
+The toolusage Demo [cli_demo_tool.py](cli_demo_tool.py) is designed for command line execution, sample tools are already defined in the code.
+
+```shell
+python cli_demo_tool.py
+```
+
+Users are expected to input queries and tool execution results following the instruction. An entire turn of tool calling requires two turns of chat.
+See the example below:
+
+```
+用户: <What is the humidity in Hangzhou today?>
+BlueLM:
+{\"answer\": null, \"function_calls\": [{\"name\": \"current-weather\", \"parameters\": {\"city\": \"Hangzhou\"}}]}
+工具结果: <{\"city\": \"Hangzhou\", \"weather\": \"The current weather is sunny, the temperature is 20 degrees Celsius, and the humidity is 40%.\"}>
+BlueLM:
+{"answer": "The humidity in Hangzhou today is 40%", "function_calls": null}
 ```
 
 ## Demo Results of BlueLM-7B-Chat
