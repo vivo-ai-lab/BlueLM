@@ -278,12 +278,17 @@ def parse_args():
                         help='LoRA rank')
     parser.add_argument('--lora_alpha',
                         type=int,
-                        default=32,
+                        default=16,
                         help='LoRA alpha')
     parser.add_argument('--lora_dropout',
                         type=float,
-                        default=0.1,
+                        default=0.05,
                         help='LoRA dropout'
+                        )
+    parser.add_argument('--lora_target',
+                        type=str,
+                        default="all",
+                        help='LoRA target'
                         )
 
     args = parser.parse_args()

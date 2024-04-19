@@ -1,4 +1,4 @@
-LR=1e-5
+LR=3e-4
 
 OUTPUT_PATH=<PATH-TO-OUTPUT>
 MODEL_PATH=<PATH-TO-MODEL>
@@ -30,5 +30,8 @@ deepspeed --num_gpus=1 --master_port $MASTER_PORT main.py \
     --save_steps 4500 \
     --learning_rate $LR \
     --finetune \
-    --lora_rank 32 \
+    --lora_rank 8 \
+    --lora_alpha 16 \
+    --lora_dropout 0.05 \
+    --lora_target "all" \
     &> $LOG_OUTPUT_PATH/training.log

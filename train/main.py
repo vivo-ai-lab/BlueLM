@@ -116,7 +116,8 @@ def main():
 
     # initialize tokenizer and model
     logger.info("Start initializing tokenizer and model ...")
-    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True, use_fast=False)
+    tokenizer = AutoTokenizer.from_pretrained(args.model_name_or_path, trust_remote_code=True, use_fast=False,
+                                              add_bos_token=False)
     model = AutoModelForCausalLM.from_pretrained(args.model_name_or_path, config=config, trust_remote_code=True)
     logger.info("Finish initializing tokenizer and model ...")
 
