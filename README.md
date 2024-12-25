@@ -31,7 +31,7 @@
 # 新闻
 
 - 2024年3月25日更新 BlueLM-7B-Chat-32K 模型参数，支持 function calling 能力。我们在 [api_server.py](openai_api_demo/api_server.py) 中提供了 OpenAI 格式的 API。更新 BlueLM-7B-Chat-32K-AWQ 和 BlueLM-7B-Chat-32K-GPTQ 模型。
-
+- 2024年12月25日将本项目的大模型开源许可证变更为 [开放原子模型许可证](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。
 # 模型介绍
 
 BlueLM 是由 vivo AI 全球研究院自主研发的大规模预训练语言模型，本次发布包含 7B 基础 (base) 模型和 7B 对话 (chat) 模型，同时我们开源了支持 **32K** 的长文本基础 (base) 模型和对话 (chat) 模型。
@@ -404,7 +404,11 @@ sh script/bluelm-7b-sft-lora.sh
 
 ## 协议
 
-社区使用代码依照 [Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0) 协议开源，且使用 BlueLM 模型权重需要遵循 [vivo BlueLM模型许可协议](MODEL_LICENSE.pdf)。BlueLM 模型权重对学术研究完全开放，同时在填写[问卷](https://developers.vivo.com/buc/bluelm/apply)进行登记认证后可免费商业使用。
+为了使本项目更加开放、灵活，服务更多开发者与用户，自2024年12月25日起，本项目的大模型开源许可证进行了一次重要更新，由 [原vivo_BlueLM模型许可协议](MODEL_LICENSE.pdf) 变更为 [开放原子模型许可证](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。
+
+基于全新的大模型开源许可证，使用者可以在更少的限制下使用、修改和分发本项目的大模型。请确保您阅读并理解新的 [许可证内容](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。我们欢迎任何对这一变化的反馈，您可以通过 GitHub Issues 与我们联系。
+
+BlueLM 模型权重对学术研究完全开放，同时在填写 [问卷](https://developers.vivo.com/buc/bluelm/apply) 进行登记认证后可免费商业使用。
     
 ## 引用
 
