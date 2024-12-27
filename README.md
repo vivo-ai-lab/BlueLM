@@ -406,10 +406,8 @@ sh script/bluelm-7b-sft-lora.sh
 
 为了使本项目更加开放、灵活，服务更多开发者与用户，自2024年12月25日起，本项目的大模型开源许可证进行了一次重要更新，由 [原vivo_BlueLM模型许可协议](MODEL_LICENSE.pdf) 变更为 [开放原子模型许可证](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。
 
-基于全新的大模型开源许可证，使用者可以在更少的限制下使用、修改和分发本项目的大模型。请确保您阅读并理解新的 [许可证内容](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。我们欢迎任何对这一变化的反馈，您可以通过 GitHub Issues 与我们联系。
+基于全新的大模型开源许可证，使用者可以在更少的限制下使用、修改和分发本项目的大模型。请确保您阅读并理解新的 [许可证内容](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf)。
 
-BlueLM 模型权重对学术研究完全开放，同时在填写 [问卷](https://developers.vivo.com/buc/bluelm/apply) 进行登记认证后可免费商业使用。
-    
 ## 引用
 
 ```
