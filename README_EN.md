@@ -404,9 +404,7 @@ This model is provided "as is". We have done our best to ensure the compliance o
 
 To make this project more open and flexible, serving more developers and users, starting from December 25, 2024, there will be a significant update to the open-source license of the large model for this project. It will change from the [Community License for BlueLM Model](MODEL_LICENSE_EN.pdf) to the [OpenAtom Model License](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf).
 
-Based on the newly introduced open-source license for the large model, users can use, modify, and distribute this project's large model with fewer restrictions. Please ensure that you read and understand the new [license](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf). We welcome any feedback regarding this change, and you can contact us through GitHub Issues.
-
-The BlueLM weights are completely open for academic research, and free commercial use is allowed after completing the [questionnaire](https://developers.vivo.com/buc/bluelm/apply).
+Based on the newly introduced open-source license for the large model, users can use, modify, and distribute this project's large model with fewer restrictions. Please ensure that you read and understand the new [license](https://github.com/vivo-ai-lab/BlueLM/blob/main/OpenAtom%20Model%20License.pdf).
 
 ## Citation
 
